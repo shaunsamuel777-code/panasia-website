@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PANASIA Assurance Company</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;color:#333}
+header{position:sticky;top:0;z-index:1000;background:#0056b3;color:#fff;padding:15px 30px;display:flex;justify-content:space-between;align-items:center}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
+.hero{background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80');background-size:cover;background-position:center;height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px}
+.hero h1{font-size:3rem}
+.hero p{margin:15px 0}
+.btn{background:#ff8800;color:#fff;text-decoration:none;padding:12px 24px;border-radius:6px}
+section{padding:60px 20px}
+.container{max-width:1100px;margin:auto}
+h2{text-align:center;color:#0056b3;margin-bottom:25px}
+.about{text-align:center}
+.cards{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.card{width:250px;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.15);transition:.3s;background:#fff}
+.card:hover{transform:translateY(-8px)}
+.stats{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;background:#f4f7fb}
+.stat{font-size:1.1rem;font-weight:600}
+.benefits{background:#0056b3;color:#fff;text-align:center}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+input,textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px}
+button{background:#0056b3;color:#fff;border:none;padding:12px 18px;border-radius:5px;cursor:pointer}
+iframe{width:100%;height:280px;border:0}
+footer{background:#222;color:#fff;text-align:center;padding:20px}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;text-decoration:none;padding:14px 18px;border-radius:40px;font-weight:600}
+@media(max-width:768px){
+header{flex-direction:column}
+nav{margin-top:10px}
+.hero h1{font-size:2rem}
+.contact-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+<h2>PANASIA Assurance</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>Your Vehicle, Our Protection</h1>
+<p>Reliable insurance renewal and claim assistance services.</p>
+<a href="#contact" class="btn">Request a Quote</a>
+</section>
+
+<section id="about">
+<div class="container about">
+<h2>About Us</h2>
+<p>PANASIA Assurance Company assists customers with vehicle insurance, renewals, claims support, and workshop coordination through a customer-focused approach.</p>
+</div>
+</section>
+
+<section class="stats">
+<div class="stat">✔ Fast Support</div>
+<div class="stat">✔ Claim Assistance</div>
+<div class="stat">✔ Policy Renewal</div>
+<div class="stat">✔ Trusted Service</div>
+</section>
+
+<section id="services">
+<div class="container">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card"><h3>Car Insurance</h3><p>Protection plans for your vehicle.</p></div>
+<div class="card"><h3>Policy Renewal</h3><p>Quick and easy renewal assistance.</p></div>
+<div class="card"><h3>Claims Support</h3><p>Guidance through the claim process.</p></div>
+<div class="card"><h3>Workshop Support</h3><p>One-stop workshop coordination.</p></div>
+</div>
+</div>
+</section>
+
+<section class="benefits">
+<h2 style="color:white">Why Choose PANASIA?</h2>
+<p>50% Cash Back on Non‑Claims*</p>
+<p>Responsive customer service and hassle‑free assistance.</p>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2>Contact Us</h2>
+<div class="contact-grid">
+<div>
+<form onsubmit="sendMsg(event)">
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<textarea rows="5" placeholder="Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+<div>
+<p><strong>Phone:</strong> +91 9686222577</p>
+<p><strong>Phone:</strong> +91 9901871804</p>
+<p><strong>Email:</strong> panasiaventures121@gmail.com</p>
+<br>
+<iframe src="https://maps.google.com/maps?q=Rajajinagar%20Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© <span id="year"></span> PANASIA Assurance Company. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919686222577">WhatsApp</a>
+
+<script>
+function sendMsg(e){
+e.preventDefault();
+alert("Thank you. We will contact you soon.");
+}
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
